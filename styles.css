@@ -59,10 +59,21 @@ body {
   }
   
   .project {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Consistent width */
+    height: 500px; /* Consistent height */
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .project img {
+    max-width: 100%; /* Image adjusts to width */
+    max-height: 370px; /* Ensures image doesn't exceed box height */
+    object-fit: cover; /* Crops image if necessary */
+    margin: 0 auto;
   }
   
   form input, form textarea {
