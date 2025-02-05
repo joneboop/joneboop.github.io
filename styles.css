@@ -131,6 +131,13 @@ body {
     background-color: #005582;
   }
 
+    /* CV Button Style */
+    .cv-btn {
+      background-color: #ff4570;
+      color: white;
+    }
+
+  
   .project img {
     width: 100%;
     height: auto;
