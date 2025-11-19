@@ -7,24 +7,36 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Sidebar navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-initials">JK</span>
+      <span class="brand-name">Joonas<br>Korkiakoski</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main>
     <header id="home">
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-<div class="header-content"> 
-  <h1>Joonas Korkiakoski</h1> <p>A software developer</p> 
-  <a href="#projects" class="btn">View My Work</a>
-</div>
-      
+      <div class="header-content">
+        <h1>Joonas Korkiakoski</h1>
+        <p>A software developer</p>
+        <a href="#projects" class="btn">View My Work</a>
+
         <div class="social-buttons">
           <a href="https://github.com/joneboop" target="_blank" class="social-btn github-btn">GitHub</a>
           <a href="https://www.linkedin.com/in/joonas-korkiakoski-487414349/" target="_blank" class="social-btn linkedin-btn">LinkedIn</a>
-        
+
+          <!-- CV dropdown -->
           <div class="dropdown">
             <button class="social-btn cv-btn" id="cvDropdownBtn">
               Download CV ▾
@@ -36,46 +48,46 @@
             </div>
           </div>
         </div>
-      </header>
-      
-
-  <section id="about">
-    <h2>Who am I?</h2>
-    <p>I am a software developer with experience mainly in Python and knowledge also in C++ and JavaScript.</p>
-    <p>Other skills include SQL, Web development and Android Development using Kotlin.</p>
-    <p>I work efficiently as a part of team and I speak multiple languages, including finnish, english and spanish.</p>
-  </section>
-
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <img src="\images\project1.png" alt="Project 1 Screenshot">
-        <h3><a href="https://github.com/joneboop/e-commerce-site">E-Commerce Site</a></h3>
-        <p>Website for selling candles.</p>
       </div>
-      <div class="project">
-        <img src="\images\project2.png" alt="Project 2 Screenshot">
-        <h3><a href="https://github.com/joneboop/Ledger">Database Implementation</a></h3>
-        <p>Database system.</p>
+    </header>
+
+    <section id="about">
+      <h2>Who am I?</h2>
+      <p>I am a software developer with experience mainly in Python and knowledge also in C++ and JavaScript.</p>
+      <p>Other skills include SQL, Web development and Android Development using Kotlin.</p>
+      <p>I work efficiently as a part of team and I speak multiple languages, including Finnish, English and Spanish.</p>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="images/project1.png" alt="Project 1 Screenshot">
+          <h3><a href="https://github.com/joneboop/e-commerce-site">E-Commerce Site</a></h3>
+          <p>Website for selling candles.</p>
+        </div>
+        <div class="project">
+          <img src="images/project2.png" alt="Project 2 Screenshot">
+          <h3><a href="https://github.com/joneboop/Ledger">Database Implementation</a></h3>
+          <p>Database system.</p>
+        </div>
       </div>
-      <!-- Add more projects as needed -->
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Send me a message and lets be in touch!</h2>
-    <form action="https://getform.io/f/aroovjqb" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <section id="contact">
+      <h2>Send me a message and let's be in touch!</h2>
+      <form action="https://getform.io/f/aroovjqb" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Joonas Korkiakoski. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Joonas Korkiakoski. All rights reserved.</p>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
