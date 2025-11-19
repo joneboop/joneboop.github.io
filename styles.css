@@ -145,4 +145,42 @@ body {
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+
+
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hidden menu by default */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: #111;        /* adjust to your theme */
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Show when toggled */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Links inside dropdown */
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #fff;                   /* adjust as you like */
+  font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+  background-color: #222;        /* hover color */
+}
