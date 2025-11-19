@@ -1,186 +1,157 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
-  }
-  
-  header {
-    height: 100vh;
-    background: linear-gradient(to bottom, #1e90ff, #87cefa);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .header-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .header-content .btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #1e90ff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  section {
-    padding: 50px;
-    text-align: center;
-  }
-  
-  #about, #contact {
-    background: #f4f4f4;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .project {
-    width: 100%; /* Consistent width */
-    height: 500px; /* Consistent height */
-    border: 1px solid #ccc;
-    padding: 16px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: flex;
+  background-color: #050509; /* adjust to your theme */
+  color: #f5f5f5;
+}
 
-  .project img {
-    max-width: 100%; /* Image adjusts to width */
-    max-height: 370px; /* Ensures image doesn't exceed box height */
-    object-fit: cover; /* Crops image if necessary */
-    margin: 0 auto;
-  }
-  
-  form input, form textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  form button {
-    padding: 10px 20px;
-    background-color: #1e90ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Social Buttons */
-.social-buttons {
-    margin-top: 20px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  .social-btn {
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* GitHub Button Style */
-  .github-btn {
-    background-color: #333;
-    color: white;
-  }
-  
-  .github-btn:hover {
-    background-color: #555;
-  }
-  
-  /* LinkedIn Button Style */
-  .linkedin-btn {
-    background-color: #0077b5;
-    color: white;
-  }
-  
-  .linkedin-btn:hover {
-    background-color: #005582;
-  }
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  padding: 2rem 1.5rem;
+  background: #0b0b12;           /* sidebar background */
+  border-right: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
 
-    /* CV Button Style */
-    .cv-btn {
-      background-color: #ff4570;
-      color: white;
-    }
+/* Brand in sidebar */
+.sidebar-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
 
-  
-  .project img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+.brand-initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.brand-name {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  opacity: 0.8;
+}
+
+/* Sidebar nav */
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-nav a {
+  display: block;
+  text-decoration: none;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  padding: 0.35rem 0;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.sidebar-nav a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* Main content shifted right */
+main {
+  margin-left: 220px;  /* same width as sidebar */
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}
 
 
-/* Dropdown wrapper */
+header#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  max-width: 700px;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Reuse your existing .btn / .social-btn styles if you have them */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Hidden menu by default */
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   min-width: 160px;
-  background-color: #111;        /* adjust to your theme */
+  background-color: #111;
   border-radius: 4px;
   padding: 0.5rem 0;
   display: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   z-index: 10;
 }
 
-/* Show when toggled */
 .dropdown-menu.show {
   display: block;
 }
 
-/* Links inside dropdown */
 .dropdown-menu a {
   display: block;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  color: #fff;                   /* adjust as you like */
+  color: #fff;
   font-size: 0.9rem;
 }
 
 .dropdown-menu a:hover {
-  background-color: #222;        /* hover color */
+  background-color: #222;
 }
