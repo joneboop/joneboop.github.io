@@ -360,7 +360,7 @@ footer {
 .skill-icon img {
   width: 45px;
   height: 45px;
-  filter: brightness(0) invert(1); /* makes white icons, matching theme */
+  object-fit: contain;
 }
 
 .skill-icon span {
