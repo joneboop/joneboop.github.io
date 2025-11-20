@@ -371,22 +371,24 @@ footer {
 
 /* Icon wrapper keeps consistent sizing but preserves colors */
 .skill-icon-wrap {
-  width: 60px;       /* fixed circle/container */
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
+  width: 48px;        /* Smaller wrapper */
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+/* FORCE png to shrink properly */
 .skill-icon-wrap img {
-  width: 40px;       /* <—— force icon size */
-  height: 40px;
+  width: 38px;        /* hard limit */
+  height: 38px;
   object-fit: contain;
   display: block;
 }
+
 
 
 /* Label under icon */
