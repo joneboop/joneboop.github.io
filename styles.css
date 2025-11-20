@@ -371,8 +371,8 @@ footer {
 
 /* Icon wrapper keeps consistent sizing but preserves colors */
 .skill-icon-wrap {
-  width: 56px;
-  height: 56px;
+  width: 60px;       /* fixed circle/container */
+  height: 60px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.04);
   display: flex;
@@ -381,13 +381,13 @@ footer {
   overflow: hidden;
 }
 
-/* IMPORTANT: no filter here so original icon colors stay */
 .skill-icon-wrap img {
-  max-width: 70%;
-  max-height: 70%;
+  width: 40px;       /* <—— force icon size */
+  height: 40px;
   object-fit: contain;
   display: block;
 }
+
 
 /* Label under icon */
 .skill-label {
